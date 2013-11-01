@@ -10,6 +10,7 @@ class Breakout extends PlayState {
 
 	//var bg:FlxSprite;
 	var t:FlxText;
+	var t2:FlxText;
 	public var player:BreakoutPlayer;
 	var enemies:FlxGroup;
 	var numenemies:Int; 
@@ -48,6 +49,15 @@ class Breakout extends PlayState {
 		t.alignment = "center";
 
 		add(t);
+		t2 = new FlxText(0, 300,200, "Press N");
+		t2.size = 23; 
+		t2.color = 0xfffffff;
+		t2.alignment = "center";
+
+		add(t2);
+
+
+
 
 
 //for loop, does the thing inside X times
@@ -94,7 +104,10 @@ class Breakout extends PlayState {
 		// 	ammo --; 
 		// }
 
-	
+		if(FlxG.keys.N){
+			FlxG.switchState(new Level2());
+		}
+
 
 
 		// Do everything which FlxState normally does every frame

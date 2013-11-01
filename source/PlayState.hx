@@ -24,24 +24,13 @@ class PlayState extends FlxState {
 	}
 	
 	override public function update():Void {
-		FlxG.overlap(player, enemyBullets, hitPlayer);
-
-
-
-
-
 		super.update();
 
 		
 				
 	}
 
-public function hitPlayer(p1:Player, ebullet:EnemyBullet):Void {
-		p1.kill();
-		ebullet.kill();
-		FlxG.switchState(new Level2());
 
-	}
 	
 
 }

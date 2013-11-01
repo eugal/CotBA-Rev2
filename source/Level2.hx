@@ -3,18 +3,21 @@ package;
 import org.flixel.FlxG; 
 import org.flixel.FlxGroup;
 import org.flixel.FlxSprite;
+import org.flixel.FlxText;
 
 class Level2 extends PlayState { 
 
 	var p1:Ship;
-	var ship:ShipCine;
+
+
+	//var ship:ShipCine;
 
 	override public function create():Void { 
 		p1 = new Ship(20,20);
 		add(p1);
 
-		ship = new ShipCine();
-		add(ship);
+		// ship = new ShipCine();
+		// add(ship);
 
 		super.create(); 
 
@@ -26,8 +29,9 @@ class Level2 extends PlayState {
 
 		
 
-		ship.y = 20;
-		ship.x = 20;
+		//ship.y = 20;
+		//ship.x = 20;
+
 
 		
 
