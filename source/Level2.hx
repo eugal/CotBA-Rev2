@@ -21,8 +21,8 @@ class Level2 extends PlayState {
 
 		super.create(); 
 
-		FlxG.bgColor = 0xffaa0000; 
-		platforms.add(new Platform(0, 400, FlxG.width,200));
+		// FlxG.bgColor = 0xffaa0000; 
+		// platforms.add(new Platform(0, 400, FlxG.width,200));
 
 		// exit = new Exit(FlxG.width-60, FlxG.height-40);
 		// add(exit);

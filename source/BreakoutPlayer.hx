@@ -36,9 +36,5 @@ class BreakoutPlayer extends FlxSprite {
 		if(x > FlxG.width-width){
 			x = FlxG.width-width;
 		}
-
-
-
-
 	}
 }

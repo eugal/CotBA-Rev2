@@ -11,14 +11,14 @@ class Breakout extends PlayState {
 	//var bg:FlxSprite;
 	var t:FlxText;
 	var t2:FlxText;
-	public var player:BreakoutPlayer;
+	//public var player:BreakoutPlayer;
 	var enemies:FlxGroup;
 	var numenemies:Int; 
 	var numkills:Int;
 	var ammo:Int;
 	//var cloud:FlxGroup;
-	public var bullets:FlxGroup;
-	public var enemyBullets:FlxGroup;
+	// public var bullets:FlxGroup;
+	// public var enemyBullets:FlxGroup;
 	//public var puff:FlxGroup;
 
 
@@ -31,14 +31,14 @@ class Breakout extends PlayState {
 //		bullets = new FlxGroup();
 //		add(bullets);
 
-		enemyBullets = new FlxGroup();
-		add(enemyBullets);
+		// enemyBullets = new FlxGroup();
+		// add(enemyBullets);
 		
 		// puff = new FlxGroup();
 		// add(puff);
 		
-		player = new BreakoutPlayer();
-		add(player);
+		breakoutplayer = new BreakoutPlayer();
+		add(breakoutplayer);
 
 		numenemies = 10;
 		numkills = 30;
