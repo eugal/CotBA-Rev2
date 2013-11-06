@@ -11,6 +11,7 @@ class PlayState extends FlxState {
 	public var bullets:FlxGroup;
 	public var enemyBullets:FlxGroup;
 	public var breakoutplayer:BreakoutPlayer;
+	public var breakoutenemies:FlxGroup;
 
 
 
@@ -24,11 +25,16 @@ class PlayState extends FlxState {
 		platforms = new FlxGroup();
 		add(platforms);
 
+		
+		bullets = new FlxGroup();
+		add(bullets);
+
 		super.create();
 	}
 	
 	override public function update():Void {
 		FlxG.overlap(breakoutplayer, enemyBullets, hitPlayer);
+		FlxG.overlap(breakoutenemies,bullets,hitEnemy);
 		super.update();
 	}
 
@@ -36,6 +42,12 @@ class PlayState extends FlxState {
 		p1.kill();
 		ebullet.kill();
 		FlxG.switchState(new Level2());
+
+	}
+		public function hitEnemy(enemy:BreakoutEnemy, bullet:Bullet):Void {
+		enemy.kill(); 
+		bullet.kill(); 
+		//numkills--; 
 
 	}
 }

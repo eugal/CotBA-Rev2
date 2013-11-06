@@ -22,6 +22,8 @@ class AssetData {
 			type.set ("Beep", Reflect.field (AssetType, "sound".toUpperCase ()));
 			className.set ("assets/brad.png", nme.NME_assets_brad_png);
 			type.set ("assets/brad.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			className.set ("assets/bullet2.png", nme.NME_assets_bullet2_png);
+			type.set ("assets/bullet2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			className.set ("assets/data/autotiles.png", nme.NME_assets_data_autotiles_png);
 			type.set ("assets/data/autotiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			className.set ("assets/data/autotiles_alt.png", nme.NME_assets_data_autotiles_alt_png);
@@ -118,6 +120,7 @@ class AssetData {
 
 class NME_assets_data_beep_mp3 extends flash.media.Sound { }
 class NME_assets_brad_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_bullet2_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_autotiles_alt_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_data_base_png extends flash.display.BitmapData { public function new () { super (0, 0); } }

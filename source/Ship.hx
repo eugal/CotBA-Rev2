@@ -62,14 +62,14 @@ class Ship extends FlxSprite {
 		if (x < -40){
 			x = FlxG.width-width;
 		}
-		if (x > FlxG.width-width){
+		if (x > FlxG.width-width+40){
 			x = 0;
 		}
 		if(y < -40){
 			y = FlxG.height-height;
 		}
-		if(y > FlxG.height-height){
-			y = 0;
+		if(y > FlxG.height-height+40){
+			y = -10;
 		}
 		super.update();		
 	}

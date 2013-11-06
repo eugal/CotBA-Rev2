@@ -12,7 +12,7 @@ class Breakout extends PlayState {
 	var t:FlxText;
 	var t2:FlxText;
 	//public var player:BreakoutPlayer;
-	var enemies:FlxGroup;
+	// var enemies:FlxGroup;
 	var numenemies:Int; 
 	var numkills:Int;
 	var ammo:Int;
@@ -61,13 +61,13 @@ class Breakout extends PlayState {
 
 
 //for loop, does the thing inside X times
-		enemies = new FlxGroup();
+		breakoutenemies = new FlxGroup();
 		for (i in 0...numenemies){
-			enemies.add(new BreakoutEnemy(i *80,140));
-			enemies.add(new BreakoutEnemy(i *80,100));
-			enemies.add(new BreakoutEnemy(i *80,60));
+			breakoutenemies.add(new BreakoutEnemy(i *80,140));
+			breakoutenemies.add(new BreakoutEnemy(i *80,100));
+			breakoutenemies.add(new BreakoutEnemy(i *80,60));
 		}
-		add(enemies);
+		add(breakoutenemies);
 
 		// cloud = new FlxGroup(); 
 		// for(i in 0...10){
@@ -98,11 +98,11 @@ class Breakout extends PlayState {
 		// 	FlxG.switchState(new Level1());
 		// }
 	
-		// if(FlxG.keys.justPressed("W")&& ammo != 0){
-		// 	bullets.add(new Bullet(player.x+14, player.y+20));
-		// 	FlxG.play("Shoot");
-		// 	ammo --; 
-		// }
+		if(FlxG.keys.justPressed("W")){
+			bullets.add(new Bullet(breakoutplayer.x+14, breakoutplayer.y+20));
+			//FlxG.play("Shoot");
+			//ammo --; 
+		}
 
 		if(FlxG.keys.N){
 			FlxG.switchState(new Level2());
